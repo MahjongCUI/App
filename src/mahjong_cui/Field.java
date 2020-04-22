@@ -3,6 +3,7 @@ package mahjong_cui;
 import mahjong_cui.player.Player;
 import mahjong_cui.tile.Tile;
 
+import java.util.Collections;
 import java.util.List;
 
 public class Field {
@@ -19,7 +20,7 @@ public class Field {
      * deckをシャッフルします。
      */
     public void shuffle() {
-
+        Collections.shuffle(deck);
     }
 
     public List<Tile> getDeck() {
