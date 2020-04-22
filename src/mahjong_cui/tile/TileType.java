@@ -4,10 +4,10 @@ public enum TileType {
     Sozu,
     Pinzu,
     Manzu,
-    Higashi,
-    Minami,
-    Nishi,
-    Kita,
+    East,
+    South,
+    West,
+    North,
     Haku,
     Hatsu,
     Chun,
@@ -29,7 +29,7 @@ public enum TileType {
 
     public boolean isWindTile() {
         return switch (this) {
-            case Higashi, Minami, Nishi, Kita -> true;
+            case East, South, West, North -> true;
             default -> false;
         };
     }
