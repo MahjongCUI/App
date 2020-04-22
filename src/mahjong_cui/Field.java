@@ -26,9 +26,18 @@ public class Field {
         return deck;
     }
 
+    /**
+     * deckから、新たな牌を渡します。deckからその牌は消滅します。
+     *
+     * @return ツモした牌
+     */
+    public Tile drawTile() {
+        return null;
+    }
+
     @Override
     public String toString() {
-        StringBuilder stringBuilder = new StringBuilder("Field{deck=");
+        StringBuilder stringBuilder = new StringBuilder("Field{\ndeck={");
 
         for (int i = 0; i < deck.size(); i++) {
             Tile tile = deck.get(i);
@@ -39,7 +48,7 @@ public class Field {
             }
         }
 
-        stringBuilder.append("\n}");
+        stringBuilder.append("\n},player = ").append(playerList).append("\n");
 
         return stringBuilder.toString();
     }

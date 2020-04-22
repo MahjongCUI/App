@@ -15,4 +15,12 @@ public class Player {
     public List<Tile> getDiscards() {
         return discards;
     }
+
+    @Override
+    public String toString() {
+        return "Player{" +
+                "hands=" + hands +
+                ", discards=" + discards +
+                '}';
+    }
 }
