@@ -58,21 +58,21 @@
 
 # auto-import.
 
-.idea/artifacts
+#.idea/artifacts
 
-.idea/compiler.xml
+#.idea/compiler.xml
 
-.idea/jarRepositories.xml
+#.idea/jarRepositories.xml
 
-.idea/modules.xml
+#.idea/modules.xml
 
-.idea/*.iml
+#.idea/*.iml
 
-.idea/modules
+#.idea/modules
 
-*.iml
+#*.iml
 
-*.ipr
+#*.ipr
 
 
 
