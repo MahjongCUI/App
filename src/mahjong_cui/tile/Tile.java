@@ -36,7 +36,7 @@ public class Tile {
         List<Tile> tileList = new ArrayList<>();
 
         for (TileType value : TileType.values()) {
-            for (int i = 0; i < 4 ; i++) {
+            for (int i = 0; i < 4; i++) {
                 if (value.isNumTile()) {
                     for (int num = 1; num <= 9; num++) {
                         tileList.add(new Tile(value, num));
@@ -52,9 +52,8 @@ public class Tile {
 
     @Override
     public String toString() {
-        return "Tile{" +
-                "tileType=" + tileType +
-                ", number=" + number +
+        return "{" + tileType +
+                "," + number +
                 '}';
     }
 }

@@ -9,6 +9,8 @@ public class Main {
     public static void main(String[] args) {
         Field field = new Field(Tile.tileSet(), new ArrayList<>());
 
-        System.out.println("field.getDeck() = " + field.getDeck().toString().replace("},", "},\n"));
+        field.shuffle();
+
+        System.out.println("field = " + field);
     }
 }
