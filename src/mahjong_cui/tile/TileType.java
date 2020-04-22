@@ -10,7 +10,7 @@ public enum TileType {
     Kita(false, false, true),
     Haku(false, true, false),
     Hatsu(false, true, false),
-    Thun(false, true, false),
+    Chun(false, true, false),
     ;
 
     private final boolean shuPai;
