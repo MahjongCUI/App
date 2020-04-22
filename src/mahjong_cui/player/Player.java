@@ -6,6 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Player {
-    private List<Tile> shoPai = new ArrayList<>();
-    private List<Tile> sutePai = new ArrayList<>();
+    private List<Tile> hands = new ArrayList<>();
+    private List<Tile> discards = new ArrayList<>();
 }

@@ -7,6 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Field {
-    private List<Tile> shonPai = new ArrayList<>();
+    private List<Tile> deck = new ArrayList<>();
     private List<Player> playerList = new ArrayList<>();
 }
