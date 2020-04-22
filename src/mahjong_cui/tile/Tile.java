@@ -17,15 +17,15 @@ public class Tile {
         return number;
     }
 
-    public final boolean isShuPai() {
-        return tileType.isShuPai();
+    public final boolean isNumTile() {
+        return tileType.isNumTile();
     }
 
-    public boolean isSangenPai() {
-        return tileType.isSangenPai();
+    public boolean isDragonTile() {
+        return tileType.isDragonTile();
     }
 
-    public boolean isFonPai() {
-        return tileType.isFonPai();
+    public boolean isWindTile() {
+        return tileType.isWindTile();
     }
 }

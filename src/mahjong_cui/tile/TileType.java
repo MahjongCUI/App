@@ -1,37 +1,36 @@
 package mahjong_cui.tile;
 
 public enum TileType {
-    Sozu(true, false, false),
-    Pinzu(true, false, false),
-    Manzu(true, false, false),
-    Higashi(false, false, true),
-    Minami(false, false, true),
-    Nishi(false, false, true),
-    Kita(false, false, true),
-    Haku(false, true, false),
-    Hatsu(false, true, false),
-    Chun(false, true, false),
+    Sozu,
+    Pinzu,
+    Manzu,
+    Higashi,
+    Minami,
+    Nishi,
+    Kita,
+    Haku,
+    Hatsu,
+    Chun,
     ;
 
-    private final boolean shuPai;
-    private final boolean sangenPai;
-    private final boolean fonPai;
-
-    TileType(boolean shuPai, boolean sangenPai, boolean fonPai) {
-        this.shuPai = shuPai;
-        this.sangenPai = sangenPai;
-        this.fonPai = fonPai;
+    public boolean isNumTile() {
+        return switch (this) {
+            case Sozu, Pinzu, Manzu -> true;
+            default -> false;
+        };
     }
 
-    public boolean isShuPai() {
-        return shuPai;
+    public boolean isDragonTile() {
+        return switch (this) {
+            case Haku, Hatsu, Chun -> true;
+            default -> false;
+        };
     }
 
-    public boolean isSangenPai() {
-        return sangenPai;
-    }
-
-    public boolean isFonPai() {
-        return fonPai;
+    public boolean isWindTile() {
+        return switch (this) {
+            case Higashi, Minami, Nishi, Kita -> true;
+            default -> false;
+        };
     }
 }
