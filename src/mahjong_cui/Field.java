@@ -32,7 +32,10 @@ public class Field {
      * @return ツモした牌
      */
     public Tile drawTile() {
-        return null;
+        Tile tile = deck.get(0);
+        deck.remove(0);
+
+        return tile;
     }
 
     @Override
