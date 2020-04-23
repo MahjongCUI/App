@@ -11,6 +11,16 @@ public final class Printer {
     }
 
     public static void printTiles(List<Tile> tileList) {
-
+        for(int i = 0;i < tileList.size();i++) {
+            System.out.print("┌　┐");
+        }
+        System.out.println();
+        for (Tile tile : tileList) {
+            System.out.print(tile.getTileString());
+        }
+        System.out.println();
+        for(int i = 0;i < tileList.size();i++) {
+            System.out.print("└　┘");
+        }
     }
 }
