@@ -32,6 +32,10 @@ public class Field {
      * @return ツモした牌
      */
     public Tile drawTile() {
+        Tile tile = deck.get(0);
+        deck.remove(0);
+
+        playerList.get(0).getHands().add(tile);
         return null;
     }
 
