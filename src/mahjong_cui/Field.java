@@ -35,8 +35,7 @@ public class Field {
         Tile tile = deck.get(0);
         deck.remove(0);
 
-        playerList.get(0).getHands().add(tile);
-        return null;
+        return tile;
     }
 
     @Override
