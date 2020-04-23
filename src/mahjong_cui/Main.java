@@ -3,6 +3,7 @@ package mahjong_cui;
 import mahjong_cui.output.Printer;
 import mahjong_cui.player.Player;
 import mahjong_cui.tile.Tile;
+import mahjong_cui.tile.TileType;
 
 import java.util.List;
 

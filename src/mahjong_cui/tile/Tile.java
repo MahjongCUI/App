@@ -1,5 +1,7 @@
 package mahjong_cui.tile;
 
+import mahjong_cui.utility.IntUtility;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -51,7 +53,14 @@ public class Tile {
     }
 
     public String getTileString() {
-        return "";
+        StringBuilder characterWrittenInTile = new StringBuilder();
+
+        if (this.isNumTile()) {
+            characterWrittenInTile.append(IntUtility.getKanjiFromNumber(this.number));
+        }
+        characterWrittenInTile.append(getTileType().getKanjiValue());
+
+        return characterWrittenInTile.toString();
     }
 
     @Override
