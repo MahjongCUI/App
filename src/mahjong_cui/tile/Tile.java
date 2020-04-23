@@ -50,6 +50,10 @@ public class Tile {
         return tileList;
     }
 
+    public String getTileString() {
+        return "";
+    }
+
     @Override
     public String toString() {
         return "{" + tileType +

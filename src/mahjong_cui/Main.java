@@ -1,5 +1,6 @@
 package mahjong_cui;
 
+import mahjong_cui.output.Printer;
 import mahjong_cui.player.Player;
 import mahjong_cui.tile.Tile;
 
@@ -15,6 +16,6 @@ public class Main {
 
         player.getHands().add(field.drawTile());
 
-        System.out.println("field = " + field);
+        Printer.printTiles(player.getHands());
     }
 }
