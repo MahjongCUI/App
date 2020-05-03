@@ -44,11 +44,11 @@ public final class Printer {
         Optional<String[]> optionalTileStringRows = tileStringList.parallelStream()
                 .map(string -> string.split("\n"))
                 .reduce((strings, strings2) -> {
-                    String[] returnStrings = new String[MAX_TILE_STRING_ROW];
+                    String[] tileStringRows = new String[MAX_TILE_STRING_ROW];
                     for (int i = 0; i < strings.length; i++) {
-                        returnStrings[i] = strings[i] + strings2[i];
+                        tileStringRows[i] = strings[i] + strings2[i];
                     }
-                    return returnStrings;
+                    return tileStringRows;
                 });
 
         //それぞれの行を表示する。
