@@ -3,7 +3,6 @@ package mahjong_cui;
 import mahjong_cui.output.Printer;
 import mahjong_cui.player.Player;
 import mahjong_cui.tile.Tile;
-import mahjong_cui.tile.TileType;
 
 import java.util.List;
 
@@ -15,7 +14,9 @@ public class Main {
 
         field.shuffle();
 
-        player.getHands().add(field.drawTile());
+        for (int i = 0; i < 14; i++) {
+            player.getHands().add(field.drawTile());
+        }
 
         Printer.printTiles(player.getHands());
     }
