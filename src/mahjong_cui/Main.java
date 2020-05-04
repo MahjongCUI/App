@@ -18,6 +18,8 @@ public class Main {
             player.getHands().add(field.drawTile());
         }
 
+        player.sortHands();
+
         Printer.printTiles(player.getHands());
     }
 }
