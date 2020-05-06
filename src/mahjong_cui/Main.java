@@ -21,5 +21,9 @@ public class Main {
         player.sortHands();
 
         Printer.printTiles(player.getHands());
+
+        player.discardHands();
+
+        Printer.printTiles(player.getHands());
     }
 }

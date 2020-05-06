@@ -34,6 +34,13 @@ public final class Printer {
                 "└　┘";
     }
 
+    private static String replaceBorderToSpace(String dust) {
+        return dust.replace("┘", " ")
+                .replace("┌", " ")
+                .replace("└", " ")
+                .replace("┐", " ");
+    }
+
     public static void printTiles(List<Tile> tileList) {
         //Tileをそれぞれ文字列に変形する。
         List<String> tileStringList = tileList.parallelStream()
@@ -51,6 +58,12 @@ public final class Printer {
                     return tileStringRows;
                 });
 
+        //牌の番号を表示する。
+        for (int i = 0; i < tileStringList.size(); i++) {
+            System.out.printf("%1x", i);
+            System.out.print(replaceBorderToSpace(tileStringList.get(i).split("\n")[0]).substring(1));
+        }
+        System.out.println();
         //それぞれの行を表示する。
         optionalTileStringRows.ifPresent(rows -> Arrays.stream(rows).forEach(System.out::println));
     }
