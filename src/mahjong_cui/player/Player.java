@@ -5,6 +5,7 @@ import mahjong_cui.tile.Tile;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Scanner;
 
 public class Player {
     private List<Tile> hands = new ArrayList<>();
@@ -22,6 +23,17 @@ public class Player {
 
     public void sortHands() {
         hands.sort(tileComparator);
+    }
+
+    public void discardHands() {
+        System.out.println("捨てる牌選択");
+
+        Scanner scanner = new Scanner(System.in);
+        scanner.useRadix(16);
+
+        int select = scanner.nextInt();
+
+        discards.add(hands.remove(select - 1));
     }
 
     @Override
