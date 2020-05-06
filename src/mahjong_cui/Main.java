@@ -20,12 +20,10 @@ public class Main {
 
         player.sortHands();
 
-        Printer.printTiles(player.getHands());
+        Printer.printPlayer(player);
 
         player.discardHands();
 
-        Printer.printTiles(player.getDiscards());
-
-        Printer.printTiles(player.getHands());
+        Printer.printPlayer(player);
     }
 }
