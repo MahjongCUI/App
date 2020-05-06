@@ -26,14 +26,14 @@ public class Player {
     }
 
     public void discardHands() {
-        System.out.println("捨てる牌選択");
+        System.out.println("捨てる牌を選択(数値)");
 
         Scanner scanner = new Scanner(System.in);
         scanner.useRadix(16);
 
         int select = scanner.nextInt();
 
-        discards.add(hands.remove(select - 1));
+        discards.add(hands.remove(select));
     }
 
     @Override

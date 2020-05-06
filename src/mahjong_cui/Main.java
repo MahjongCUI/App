@@ -24,6 +24,8 @@ public class Main {
 
         player.discardHands();
 
+        Printer.printTiles(player.getDiscards());
+
         Printer.printTiles(player.getHands());
     }
 }
