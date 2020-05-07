@@ -17,13 +17,18 @@ public class Main {
         for (int i = 0; i < 14; i++) {
             player.getHands().add(field.drawTile());
         }
-
         player.sortHands();
 
-        Printer.printPlayer(player);
+        while (field.getDeck().size() > 0) {
+            Printer.printPlayer(player);
 
-        player.discardHands();
+            player.discardHands();
 
-        Printer.printPlayer(player);
+            player.sortHands();
+
+            Printer.printPlayer(player);
+
+            player.getHands().add(field.drawTile());
+        }
     }
 }
