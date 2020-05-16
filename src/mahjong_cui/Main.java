@@ -15,7 +15,7 @@ public class Main {
         field.shuffle();
 
         for (int i = 0; i < 14; i++) {
-            player.getHands().add(field.drawTile());
+            player.addHands(field.drawTile());
         }
         player.sortHands();
 
@@ -28,7 +28,7 @@ public class Main {
 
             Printer.printPlayer(player);
 
-            player.getHands().add(field.drawTile());
+            player.addHands(field.drawTile());
         }
     }
 }

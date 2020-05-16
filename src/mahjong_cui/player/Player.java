@@ -13,12 +13,16 @@ public class Player {
 
     protected Comparator<Tile> tileComparator = Comparator.comparingInt((Tile tile) -> tile.getTileType().ordinal()).thenComparingInt(Tile::getNumber);
 
-    public List<Tile> getHands() {
-        return hands;
+    public void addHands(Tile tile) {
+        hands.add(tile);
     }
 
-    public List<Tile> getDiscards() {
-        return discards;
+    public List<Tile> getCopyHands() {
+        return List.copyOf(hands);
+    }
+
+    public List<Tile> getCopyDiscards() {
+        return List.copyOf(discards);
     }
 
     public void sortHands() {

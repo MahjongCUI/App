@@ -44,9 +44,9 @@ public final class Printer {
 
     public static void printPlayer(Player player) {
         System.out.println("捨て牌");
-        printTiles(player.getDiscards(), false);
+        printTiles(player.getCopyDiscards(), false);
         System.out.println("手牌");
-        printTiles(player.getHands(), true);
+        printTiles(player.getCopyHands(), true);
     }
 
     public static void printTiles(List<Tile> tileList, boolean needNumber) {
