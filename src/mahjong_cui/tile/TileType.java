@@ -1,5 +1,7 @@
 package mahjong_cui.tile;
 
+import java.util.Comparator;
+
 public enum TileType {
     Sozu(TileTypeType.NUMBER, "索"),
     Pinzu(TileTypeType.NUMBER, "筒"),
@@ -35,6 +37,13 @@ public enum TileType {
 
     public String getKanjiValue() {
         return kanji;
+    }
+
+    //定義順に依存するので定義順をむやみに変更しないこと
+    private static Comparator<TileType> comparator = Comparator.comparingInt(Enum::ordinal);
+
+    public static Comparator<TileType> getComparator() {
+        return comparator;
     }
 
     private enum TileTypeType {

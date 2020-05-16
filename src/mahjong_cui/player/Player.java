@@ -1,6 +1,7 @@
 package mahjong_cui.player;
 
 import mahjong_cui.tile.Tile;
+import mahjong_cui.tile.TileType;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -11,7 +12,7 @@ public class Player {
     private List<Tile> hands = new ArrayList<>();
     private List<Tile> discards = new ArrayList<>();
 
-    protected Comparator<Tile> tileComparator = Comparator.comparingInt((Tile tile) -> tile.getTileType().ordinal()).thenComparingInt(Tile::getNumber);
+    protected Comparator<Tile> tileComparator = ((Comparator<Tile>) (a, b) -> TileType.getComparator().compare(a.getTileType(), b.getTileType())).thenComparingInt(Tile::getNumber);
 
     public void addHands(Tile tile) {
         hands.add(tile);
