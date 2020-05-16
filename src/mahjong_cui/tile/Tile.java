@@ -9,7 +9,7 @@ public class Tile {
     private final TileType tileType;
     private final int number;
 
-    public Tile(TileType tileType, int number) {
+    private Tile(TileType tileType, int number) {
         this.tileType = tileType;
         this.number = number;
     }
