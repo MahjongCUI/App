@@ -19,7 +19,7 @@ public class Main {
         }
         player.sortHands();
 
-        while (field.getDeck().size() > 0) {
+        while (field.getCopyDeck().size() > 0) {
             Printer.printPlayer(player);
 
             player.discardHands();

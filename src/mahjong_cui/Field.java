@@ -22,8 +22,12 @@ public class Field {
         Collections.shuffle(deck);
     }
 
-    public List<Tile> getDeck() {
-        return deck;
+    public List<Tile> getCopyDeck() {
+        return List.copyOf(deck);
+    }
+
+    public List<Player> getCopyPlayerList() {
+        return List.copyOf(playerList);
     }
 
     /**
