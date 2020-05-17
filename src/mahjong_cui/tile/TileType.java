@@ -27,12 +27,12 @@ public enum TileType {
         return tileTypeType.isNumTile();
     }
 
-    public boolean isDragonTile() {
-        return tileTypeType.isDragonTile();
-    }
-
     public boolean isWindTile() {
         return tileTypeType.isWindTile();
+    }
+
+    public boolean isDragonTile() {
+        return tileTypeType.isDragonTile();
     }
 
     public String getKanjiValue() {
@@ -54,27 +54,12 @@ public enum TileType {
             }
 
             @Override
-            public boolean isDragonTile() {
-                return false;
-            }
-
-            @Override
             public boolean isWindTile() {
-                return false;
-            }
-        }, DRAGON {
-            @Override
-            public boolean isNumTile() {
                 return false;
             }
 
             @Override
             public boolean isDragonTile() {
-                return true;
-            }
-
-            @Override
-            public boolean isWindTile() {
                 return false;
             }
         }, WIND {
@@ -84,20 +69,36 @@ public enum TileType {
             }
 
             @Override
+            public boolean isWindTile() {
+                return true;
+            }
+
+            @Override
             public boolean isDragonTile() {
+                return false;
+            }
+        }, DRAGON {
+            @Override
+            public boolean isNumTile() {
                 return false;
             }
 
             @Override
             public boolean isWindTile() {
+                return false;
+            }
+
+            @Override
+            public boolean isDragonTile() {
                 return true;
             }
         };
 
         public abstract boolean isNumTile();
 
+        public abstract boolean isWindTile();
+
         public abstract boolean isDragonTile();
 
-        public abstract boolean isWindTile();
     }
 }
